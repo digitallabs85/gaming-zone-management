@@ -7,6 +7,7 @@ import { Gamepad2, LogOut, Menu, X } from 'lucide-react';
 import { NAV } from '@/lib/nav';
 import { useAuth } from '@/store/auth';
 import { AUTHENTICATION } from '@/lib/config';
+import { seed } from '@/lib/seed';
 
 function AppShell({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
@@ -98,7 +99,7 @@ function AppShell({ children }: { children: React.ReactNode }) {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-base font-bold uppercase tracking-[0.14em] text-white">
-                    Gaming Zone
+                    {seed.settings.businessName}
                   </span>
                 </div>
               </Link>
